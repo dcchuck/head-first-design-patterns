@@ -1,3 +1,5 @@
+// The Strategy Pattern
+
 interface FlyBehavior {
   fly: () => void;
 }
@@ -70,9 +72,12 @@ class MallardDuck extends Duck {
   display = () => console.log("I'm a real Mallard Duck");
 }
 
-const mallard = new MallardDuck();
-mallard.performQuack();
-mallard.performFly();
+const exampleOne = () => {
+  const mallard = new MallardDuck();
+  mallard.performQuack();
+  mallard.performFly();
+}
+
 
 class ModelDuck extends Duck {
   flyBehavior = new FlyNoWay();
@@ -86,7 +91,16 @@ class FlyRocketPowered implements FlyBehavior {
   }
 }
 
-const model = new ModelDuck();
-model.performFly();
-model.setFlyBehavior(new FlyRocketPowered());
-model.performFly();
+const exampleTwo = () => {
+  const model = new ModelDuck();
+  model.performFly();
+  model.setFlyBehavior(new FlyRocketPowered());
+  model.performFly();
+}
+
+const ChapterOne = {
+  exampleOne,
+  exampleTwo,
+}
+
+export default ChapterOne;
