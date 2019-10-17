@@ -11,7 +11,8 @@ A typescript implementation.
 
 ## Patterns
 
-```
+#### Chapter One
 The Strategy Pattern defines a family of algorithms, encapsulates each one, and makes them interchangable. Strategy lets the algorithm vary independently from clients that use it.
-```
-See: Chapter One
+
+#### Chapter Two
+The Observer Pattern defines a one-to-many dependency between objects so that when one objects changes state, all its dependents are notified and updated automatically.
