@@ -8,6 +8,7 @@ A typescript implementation.
 * `Program to an interface, not an implementation.` - `Program to an interface really means program to a super type.`
 * `Favor composition over inheritance`
 * `Strive for loosely coupled designs between objects that interact.`
+* `Classes should be open for extension, but closed for modification.`
 
 ## Patterns
 
