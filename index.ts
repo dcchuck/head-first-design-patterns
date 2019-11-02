@@ -2,6 +2,7 @@ import ChapterOne from './chapter-1';
 import ChapterTwo from './chapter-2';
 import ChapterThree from './chapter-3';
 import ChapterFour from './chapter-4';
+import ChapterFive from './chapter-5';
 
 // Run the chapter one examples
 ChapterOne.exampleOne();
@@ -14,3 +15,5 @@ ChapterTwo.onStandardLibrary();
 ChapterThree.exampleOne();
 
 ChapterFour.exampleOne();
+
+ChapterFive.exampleOne();

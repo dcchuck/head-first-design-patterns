@@ -119,6 +119,9 @@ class NyStylePizzaStore extends PizzaStore {
        *
        * So if you don't know what kind of pizza you want you best believe I'm
        * going to just give you cheese.
+       *
+       * NOTE: This is addressed specifically in the 'there are no dumb
+       * questions' section of this chapter.
        */
       return new NyStyleCheesePizza();
     }
