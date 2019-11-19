@@ -3,6 +3,7 @@ import ChapterTwo from './chapter-2';
 import ChapterThree from './chapter-3';
 import ChapterFour from './chapter-4';
 import ChapterFive from './chapter-5';
+import ChapterSix from './chapter-6';
 
 // Run the chapter one examples
 ChapterOne.exampleOne();
@@ -17,3 +18,6 @@ ChapterThree.exampleOne();
 ChapterFour.exampleOne();
 
 ChapterFive.exampleOne();
+
+ChapterSix.exampleOne();
+ChapterSix.exampleTwo();
