@@ -10,6 +10,7 @@ A typescript implementation.
 * `Strive for loosely coupled designs between objects that interact.`
 * `Classes should be open for extension, but closed for modification.`
 * `Depend upon abstractions. Do no depend upon concrete classes.`
+* `Principle of Least Knowledge: talk only to your immediate friends`
 
 ## Patterns
 
@@ -33,3 +34,6 @@ The Singleton Pattern ensures a class has only one instance, and provides a glob
 
 #### The Command Pattern
 The Command Pattern encapsulates a request as an object, thereby letting you parameterize other objects with different requests, queue or log requests, and support undoable operations.
+
+#### The Facade Pattern
+The Facade Pattern provides a unified interface to a set of interfaces in a subsystem. Facade defines a higher level interface that makes the subsystem easier to use.
