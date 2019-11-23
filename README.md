@@ -11,6 +11,7 @@ A typescript implementation.
 * `Classes should be open for extension, but closed for modification.`
 * `Depend upon abstractions. Do no depend upon concrete classes.`
 * `Principle of Least Knowledge: talk only to your immediate friends`
+* `The Hollywood Principle: Don't call us, we'll call you.`
 
 ## Patterns
 
@@ -37,3 +38,6 @@ The Command Pattern encapsulates a request as an object, thereby letting you par
 
 #### The Facade Pattern
 The Facade Pattern provides a unified interface to a set of interfaces in a subsystem. Facade defines a higher level interface that makes the subsystem easier to use.
+
+#### The Template Method Pattern
+The Template Method Pattern defines the skeleton of an algorithm in a method, deferring some steps to subclasses. Template Method lets subclasses redefine certain steps of an algorithm without changing the algorithm's structure.
