@@ -1,46 +1,39 @@
 # Head First Design Patterns
 
-A typescript implementation.
+`Head First Design Patters` is a book that introduces a collection of design patterns and principles using humurous images and code written in [Java](https://docs.oracle.com/javase/8/docs/technotes/guides/language/index.html). This respository contains code demonstrating these patterns and principles in [Typescript](https://www.typescriptlang.org/).
 
-## Design Principles
-
-* `Identify the aspects of your application that vary and separate them from what stays the same.`
-* `Program to an interface, not an implementation.` - `Program to an interface really means program to a super type.`
-* `Favor composition over inheritance`
-* `Strive for loosely coupled designs between objects that interact.`
-* `Classes should be open for extension, but closed for modification.`
-* `Depend upon abstractions. Do no depend upon concrete classes.`
-* `Principle of Least Knowledge: talk only to your immediate friends`
-* `The Hollywood Principle: Don't call us, we'll call you.`
+#### [Check Out The Book Resources](https://www.wickedlysmart.com/head-first-design-patterns/)
 
 ## Patterns
 
-#### The Strategy Pattern
-The Strategy Pattern defines a family of algorithms, encapsulates each one, and makes them interchangable. Strategy lets the algorithm vary independently from clients that use it.
+#### [The Strategy Pattern](patterns/strategy/index.ts)
+#### [The Observer Pattern](patterns/observer/index.ts)
+#### [The Decorator Pattern](patterns/decorator/index.ts)
+#### [The Factory Method Pattern](patterns/factory/index.ts)
+#### [The Abstract Factory Pattern](patterns/factory/index.ts)
+#### [The Singleton Pattern](patterns/singleton/index.ts)
+#### [The Command Pattern](patterns/command/index.ts)
+#### [The Adapter Pattern](patterns/command/adapter-facade/index.ts)
+#### [The Facade Pattern](patterns/command/adapter-facade/index.ts)
+#### [The Template Method Pattern](patterns/template-method/index.ts)
+#### [The Iterator Pattern](patterns/iterator/index.ts)
 
-#### The Observer Pattern
-The Observer Pattern defines a one-to-many dependency between objects so that when one objects changes state, all its dependents are notified and updated automatically.
+## Design Principles
 
-#### The Decorator Pattern
-The Decorator Pattern attaches additional responsibilties to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality.
+#### Identify the aspects of your application that vary and separate them from what stays the same.
 
-#### The Factory Method Pattern
-The Factory Method Pattern defines an interface for creating an object, but lets subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses.
+#### Program to an interface, not an implementation. - Program to an interface really means program to a super type.
 
-#### The Abstract Factory Pattern
-The Abstract Factory Pattern provides an interface for creating families of related or dependent object without specifying their concreate classes.
+#### Favor composition over inheritance
 
-#### The Singleton Pattern
-The Singleton Pattern ensures a class has only one instance, and provides a global point of access to it.
+#### Strive for loosely coupled designs between objects that interact.
 
-#### The Command Pattern
-The Command Pattern encapsulates a request as an object, thereby letting you parameterize other objects with different requests, queue or log requests, and support undoable operations.
+#### Classes should be open for extension, but closed for modification.
 
-#### The Facade Pattern
-The Facade Pattern provides a unified interface to a set of interfaces in a subsystem. Facade defines a higher level interface that makes the subsystem easier to use.
+#### Depend upon abstractions. Do no depend upon concrete classes.
 
-#### The Template Method Pattern
-The Template Method Pattern defines the skeleton of an algorithm in a method, deferring some steps to subclasses. Template Method lets subclasses redefine certain steps of an algorithm without changing the algorithm's structure.
+#### Principle of Least Knowledge: talk only to your immediate friends
 
-#### The Iterator Pattern
-The Iterator Pattern provides a way to access the elements of an aggregate object sequentially without exposing its underlying representation.
+#### The Hollywood Principle: Don't call us, we'll call you.
+
+#### A class should have only one reason to change.
