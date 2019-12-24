@@ -1,29 +1,28 @@
-import ChapterOne     from './chapter-1';
-import ChapterTwo     from './chapter-2';
-import ChapterThree   from './chapter-3';
-import ChapterFour    from './chapter-4';
-import ChapterFive    from './chapter-5';
-import ChapterSix     from './chapter-6';
-import ChapterSeven   from './chapter-7';
-import ChapterEight   from './chapter-8';
+import strategy     from './patterns/strategy';
+import observer     from './patterns/observer';
+import decorator   from './patterns/decorator';
+import factory    from './patterns/factory';
+import singleton    from './patterns/singleton';
+import command     from './patterns/command';
+import adapterFacade   from './patterns/adapter-facade';
+import iterator   from './patterns/iterator';
 
-// Run the chapter one examples
-ChapterOne.exampleOne();
-ChapterOne.exampleTwo();
+strategy.exampleOne();
+strategy.exampleTwo();
 
-ChapterTwo.exampleOne();
-ChapterTwo.exampleTwo();
-ChapterTwo.onStandardLibrary();
+observer.exampleOne();
+observer.exampleTwo();
+observer.onStandardLibrary();
 
-ChapterThree.exampleOne();
+decorator.exampleOne();
 
-ChapterFour.exampleOne();
+factory.exampleOne();
 
-ChapterFive.exampleOne();
+singleton.exampleOne();
 
-ChapterSix.exampleOne();
-ChapterSix.exampleTwo();
+command.exampleOne();
+command.exampleTwo();
 
-ChapterSeven.exampleOne();
+adapterFacade.exampleOne();
 
-ChapterEight.exampleOne();
+iterator.exampleOne();

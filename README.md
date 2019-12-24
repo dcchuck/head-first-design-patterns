@@ -1,6 +1,6 @@
 # Head First Design Patterns
 
-`Head First Design Patters` is a book that introduces a collection of design patterns and principles using humurous images and code written in [Java](https://docs.oracle.com/javase/8/docs/technotes/guides/language/index.html). This respository contains code demonstrating these patterns and principles in [Typescript](https://www.typescriptlang.org/).
+**Head First Design Patterns** is a book that introduces a collection of design patterns and principles using humurous images and code written in [Java](https://docs.oracle.com/javase/8/docs/technotes/guides/language/index.html). This respository contains code demonstrating these patterns and principles in [Typescript](https://www.typescriptlang.org/).
 
 #### [Check Out The Book Resources](https://www.wickedlysmart.com/head-first-design-patterns/)
 
@@ -13,16 +13,16 @@
 #### [The Abstract Factory Pattern](patterns/factory/index.ts)
 #### [The Singleton Pattern](patterns/singleton/index.ts)
 #### [The Command Pattern](patterns/command/index.ts)
-#### [The Adapter Pattern](patterns/command/adapter-facade/index.ts)
-#### [The Facade Pattern](patterns/command/adapter-facade/index.ts)
+#### [The Adapter Pattern](patterns/adapter-facade/index.ts)
+#### [The Facade Pattern](patterns/adapter-facade/index.ts)
 #### [The Template Method Pattern](patterns/template-method/index.ts)
 #### [The Iterator Pattern](patterns/iterator/index.ts)
 
-## Design Principles
+## :yin_yang: Design Principles :yin_yang:
 
 #### Identify the aspects of your application that vary and separate them from what stays the same.
 
-#### Program to an interface, not an implementation. - Program to an interface really means program to a super type.
+#### Program to an interface, not an implementation.
 
 #### Favor composition over inheritance
 
