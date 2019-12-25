@@ -6,6 +6,35 @@
  * from clients that use it.
  */
 
+/**
+ * Exercise
+ *
+ * We're working on a duck simulator in this design pattern example. We have
+ * a wide variety of ducks to implement. The original approach involved a super
+ * class Duck, from which all ducks would inherit.
+ *
+ * Where does this break down? Big Business asks us to let the ducks fly, so
+ * we change the super class of course. But alas! Some of these ducks shouldn't
+ * be flying. Enter a few design principles.
+ *
+ * What do these have to do with the 'Strategy Pattern'?
+ *
+ * DESIGN PATTERNS
+ *   Identify the aspects of your application that vary
+ *      and separate them from what stays the same.
+ *
+ *   -> The behavior of the ducks will change
+ *
+ *   Program to an interface, not an implementation.
+ *
+ *   -> The super class duck is what we're actually coding to here
+ *
+ *   Favor composition at inheritance
+ *
+ *   -> This is what got us in trouble in the first place! Over inheritance tied
+ *      our subclasses to the super class.
+ */
+
 interface FlyBehavior {
   fly: () => void;
 }
@@ -78,12 +107,24 @@ class MallardDuck extends Duck {
   display = () => console.log("I'm a real Mallard Duck");
 }
 
+class RubberDuck extends Duck {
+  flyBehavior = new FlyNoWay();
+  quackBehavior = new MuteQuack();
+  display = () => console.log("I am a Rubber Duck!");
+}
+
 const exampleOne = () => {
+  console.log("Strategy Pattern: Example 1\n");
+  console.log("Incoming Mallard Duck!");
   const mallard = new MallardDuck();
   mallard.performQuack();
   mallard.performFly();
+  console.log("Now the rubber duck!");
+  const rubberDuck = new RubberDuck();
+  rubberDuck.performQuack();
+  rubberDuck.performFly();
+  console.log("\n**DONE**");
 }
-
 
 class ModelDuck extends Duck {
   flyBehavior = new FlyNoWay();
@@ -98,10 +139,18 @@ class FlyRocketPowered implements FlyBehavior {
 }
 
 const exampleTwo = () => {
+  console.log("Strategy Pattern: Example 2\n");
+  console.log("Our implementation allows for dynamic assignment of behaviors.");
   const model = new ModelDuck();
+  console.log("Executing and changing Fly...");
   model.performFly();
   model.setFlyBehavior(new FlyRocketPowered());
   model.performFly();
+  console.log("Executing and changing Quack...");
+  model.performQuack();
+  model.setQuackBehavior(new Squeak());
+  model.performQuack();
+  console.log("\n**DONE**");
 }
 
 const ChapterOne = {
