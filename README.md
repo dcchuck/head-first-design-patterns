@@ -6,7 +6,7 @@
 
 ## Patterns
 
-#### [The Strategy Pattern](patterns/strategy/index.ts)
+#### The Strategy Pattern [<img src="./assets/typescript.svg" width="24">](patterns/strategy/index.ts) [<img src="./assets/rust.svg" width="24">](src/lib.rs)
 #### [The Observer Pattern](patterns/observer/index.ts)
 #### [The Decorator Pattern](patterns/decorator/index.ts)
 #### [The Factory Method Pattern](patterns/factory/index.ts)
