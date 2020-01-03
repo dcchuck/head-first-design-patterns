@@ -5,7 +5,7 @@
 | Patterns | Writeup | Implementations |
 |----|----|----|
 |The Strategy Pattern | [Link](patterns/strategy/README.md) | [<img src="./assets/typescript.svg" width="24">](patterns/strategy/index.ts) [<img src="./assets/rust.svg" width="24">](src/lib.rs) |
-|The Observer Pattern | | [<img src="./assets/typescript.svg" width="24">](patterns/observer/index.ts) |
+|The Observer Pattern | [Link](patterns/observer/README.md) | [<img src="./assets/typescript.svg" width="24">](patterns/observer/index.ts) |
 |The Decorator Pattern | | [<img src="./assets/typescript.svg" width="24">](patterns/decorator/index.ts) |
 |The Factory Method Pattern | | [<img src="./assets/typescript.svg" width="24">](patterns/factory/index.ts) |
 |The Abstract Factory Pattern | | [<img src="./assets/typescript.svg" width="24">](patterns/factory/index.ts) |
