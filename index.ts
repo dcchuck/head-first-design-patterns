@@ -1,28 +1,54 @@
-import strategy     from './patterns/strategy';
-import observer     from './patterns/observer';
-import decorator   from './patterns/decorator';
-import factory    from './patterns/factory';
-import singleton    from './patterns/singleton';
-import command     from './patterns/command';
-import adapterFacade   from './patterns/adapter-facade';
-import iterator   from './patterns/iterator';
+import program from 'commander';
+import patterns from './patterns';
 
-strategy.exampleOne();
-strategy.exampleTwo();
+const patternNames = Object.keys(patterns);
 
-observer.exampleOne();
-observer.exampleTwo();
-observer.onStandardLibrary();
+function listAllPatterns() {
+  patternNames.forEach(pattern => { console.log(pattern) });
+}
 
-decorator.exampleOne();
+function runPattern(k: string) {
+  if (patternNames.filter(n => n === k).length !== 1) {
+    console.log('Pattern not found. Patterns include:');
+    listAllPatterns();
+    return;
+  }
 
-factory.exampleOne();
+  function runAll(obj: any) {
+    Object.keys(obj).forEach(key => {
+      obj[key]();
+    })
+  }
+  const ok = patterns[k];
+  runAll(ok);
+}
 
-singleton.exampleOne();
+program
+  .option('-a, --all', 'run all examples')
+  .option('-p, --pattern <name>', 'run specific example')
+  .option('-l, --list', 'list available examples');
 
-command.exampleOne();
-command.exampleTwo();
+program.parse(process.argv);
 
-adapterFacade.exampleOne();
+let executed = false;
 
-iterator.exampleOne();
+if (program.list) {
+  executed = true;
+  listAllPatterns();
+}
+
+if (program.pattern) {
+  executed = true;
+  runPattern(program.pattern)
+}
+
+if (program.all) {
+  executed = true;
+  patternNames.forEach(pattern => {
+    runPattern(pattern);
+  })
+}
+
+if (!executed) {
+  program.outputHelp();
+}
