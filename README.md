@@ -16,27 +16,11 @@
 |The Template Method Pattern | | [<img src="./assets/typescript.svg" width="24">](patterns/template-method/index.ts) |
 |The Iterator Pattern | | [<img src="./assets/typescript.svg" width="24">](patterns/iterator/index.ts) |
 
-## :yin_yang: Design Principles :yin_yang:
-
-#### Identify the aspects of your application that vary and separate them from what stays the same.
-
-#### Program to an interface, not an implementation.
-
-#### Favor composition over inheritance
-
-#### Strive for loosely coupled designs between objects that interact.
-
-#### Classes should be open for extension, but closed for modification.
-
-#### Depend upon abstractions. Do no depend upon concrete classes.
-
-#### Principle of Least Knowledge: talk only to your immediate friends
-
-#### The Hollywood Principle: Don't call us, we'll call you.
-
-#### A class should have only one reason to change.
-
-## The Book
-[Link](https://www.wickedlysmart.com/head-first-design-patterns/)
+## The Book & Other Resources
+<img src="./assets/head-first-design-patterns-cover.jpg" height="45%" width="45%"/>
 
 The text is a very approachable introduction to design patterns. If you have any Java experience, or are even just comfortable reading code and willing to learn a little, I recommend it.
+
+The code from the book, as well as a number of free and/or alternate media design pattern resources are availble over at WickedlySmart's wesbite - [link](https://www.wickedlysmart.com/head-first-design-patterns/)
+
+[Design Patterns](./DEISGN_PATTERNS.md)
