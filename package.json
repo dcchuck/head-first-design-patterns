@@ -1,17 +1,15 @@
 {
-  "name": "chapter-1",
-  "version": "1.0.0",
-  "description": "A typescript implementation.",
-  "main": "index.js",
+  "name": "head-first-design-patterns-Typescript",
+  "version": "0.1.0",
+  "description": "Typescript implementation of patterns described in Head First Design Patterns.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "tsc": "tsc",
-    "examples": "node index.js"
+    "examples": "ts-node index.ts"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "chuck.danielsson@gmail.com",
+  "license": "MIT",
   "devDependencies": {
     "@types/node": "^12.11.1",
+    "ts-node": "^10.4.0",
     "typescript": "^3.6.3"
   },
   "keywords": [],
