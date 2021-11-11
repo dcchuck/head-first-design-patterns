@@ -76,6 +76,18 @@ class RubberDuck extends Duck {
   display = () => console.log("I am a Rubber Duck!");
 }
 
+class ModelDuck extends Duck {
+  flyBehavior = new FlyNoWay();
+  quackBehavior = new Quack();
+  display = () => console.log("I'm a model duck");
+}
+
+class FlyRocketPowered implements FlyBehavior {
+  fly() {
+    console.log("I'm flying with a rocket!");
+  }
+}
+
 const exampleOne = () => {
   console.log("Strategy Pattern: Example 1\n");
   console.log("Incoming Mallard Duck!");
@@ -87,18 +99,6 @@ const exampleOne = () => {
   rubberDuck.performQuack();
   rubberDuck.performFly();
   console.log("\n**DONE**");
-}
-
-class ModelDuck extends Duck {
-  flyBehavior = new FlyNoWay();
-  quackBehavior = new Quack();
-  display = () => console.log("I'm a model duck");
-}
-
-class FlyRocketPowered implements FlyBehavior {
-  fly() {
-    console.log("I'm flying with a rocket!");
-  }
 }
 
 const exampleTwo = () => {
