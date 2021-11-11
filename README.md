@@ -17,6 +17,9 @@
 |The Iterator Pattern | | [<img src="./assets/typescript.svg" width="24">](patterns/iterator/index.ts) |
 
 ## The Book & Other Resources
+
+*Update* A new version of the text was released in December of 2020! Find it on O'Reilly [here](https://www.oreilly.com/library/view/head-first-design/9781492077992/)
+
 <img src="./assets/head-first-design-patterns-cover.jpg" height="45%" width="45%"/>
 
 The text is a very approachable introduction to design patterns. If you have any Java experience, or are even just comfortable reading code and willing to learn a little, I recommend it.
