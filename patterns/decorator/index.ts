@@ -8,7 +8,7 @@
 
 abstract class Beverage {
   abstract cost(): number;
-  description: string = 'Unknown Beverage';
+  description = 'Unknown Beverage';
 
   public getDescription() {
     return this.description;
@@ -64,7 +64,7 @@ class Mocha extends CondimentDecorator {
     return this.beverage.getDescription() + ', Mocha';
   }
   public cost() {
-    return this.beverage.cost() + 0.20;
+    return this.beverage.cost() + 0.2;
   }
 }
 
@@ -118,6 +118,6 @@ const exampleOne = (): void => {
   beverage3 = new Mocha(beverage3);
   beverage3 = new Whip(beverage3);
   printBeverage(beverage3);
-}
+};
 
-export default { exampleOne };
+export default {exampleOne};

@@ -25,7 +25,7 @@ const onStandardLibrary = () => {
   const updateTwo = (arg1: number, arg2: string) =>
     console.log(`Your update: I saw him eat ${arg1} ${arg2}s`);
 
-  const pupdate = () => console.log('Woof!')
+  const pupdate = () => console.log('Woof!');
 
   emitter.on('update', update);
   emitter.on('update', updateTwo);
@@ -41,6 +41,6 @@ const onStandardLibrary = () => {
   emitter.emit('pupdate');
   emitter.removeListener('pupdate', pupdate);
   emitter.emit('pupdate');
-}
+};
 
 export default onStandardLibrary;

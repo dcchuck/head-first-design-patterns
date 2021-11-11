@@ -7,7 +7,8 @@ interface Observer {
 }
 
 interface Subject {
-  registerObserver: (o: Observer) => void; removeObserver: (o: Observer) => void;
+  registerObserver: (o: Observer) => void;
+  removeObserver: (o: Observer) => void;
   notifyObservers: () => void;
 }
 
@@ -38,7 +39,9 @@ class WeatherData implements Subject {
 
   // Is there an attr_accessor type feature or am I always calling this?
   notifyObservers() {
-    this.observers.forEach(observer => observer.update(this.temperature, this.humidity, this.pressure));
+    this.observers.forEach(observer =>
+      observer.update(this.temperature, this.humidity, this.pressure)
+    );
   }
 
   measurementsChanges() {
@@ -73,7 +76,9 @@ class CurrentConditionsDisplay implements Observer, DisplayElement {
   }
 
   display() {
-    console.log(`Current Conditions: ${this.temperature} F degrees and ${this.humidity} humidity`)
+    console.log(
+      `Current Conditions: ${this.temperature} F degrees and ${this.humidity} humidity`
+    );
   }
 }
 
@@ -111,21 +116,28 @@ class HeatIndexDisplay implements Observer, DisplayElement {
   }
 
   display() {
-    console.log(`Heat index is ${this.heatIndex}`)
+    console.log(`Heat index is ${this.heatIndex}`);
   }
 
   computeHeadIndex(t: number, rh: number) {
     return (
-      (16.923 + (0.185212 * t) + (5.37941 * rh) - (0.100254 * t * rh) +
-      (0.00941695 * (t * t)) + (0.00728898 * (rh * rh)) +
-      (0.000345372 * (t * t * rh)) - (0.000814971 * (t * rh * rh)) +
-      (0.0000102102 * (t * t * rh * rh)) - (0.000038646 * (t * t * t)) +
-      (0.0000291583 * (rh * rh * rh)) + (0.00000142721 * (t * t * t * rh)) +
-      (0.000000197483 * (t * rh * rh * rh)) -
-      (0.0000000218429 * (t * t * t * rh * rh)) +
-      0.000000000843296 * (t * t * rh * rh * rh)) -
-      (0.0000000000481975 * (t * t * t * rh * rh * rh))
-    )
+      16.923 +
+      0.185212 * t +
+      5.37941 * rh -
+      0.100254 * t * rh +
+      0.00941695 * (t * t) +
+      0.00728898 * (rh * rh) +
+      0.000345372 * (t * t * rh) -
+      0.000814971 * (t * rh * rh) +
+      0.0000102102 * (t * t * rh * rh) -
+      0.000038646 * (t * t * t) +
+      0.0000291583 * (rh * rh * rh) +
+      0.00000142721 * (t * t * t * rh) +
+      0.000000197483 * (t * rh * rh * rh) -
+      0.0000000218429 * (t * t * t * rh * rh) +
+      0.000000000843296 * (t * t * rh * rh * rh) -
+      0.0000000000481975 * (t * t * t * rh * rh * rh)
+    );
   }
 }
 
@@ -139,7 +151,6 @@ function exampleTwo() {
   weatherData.setMeasurements(80, 65, 30.4);
   weatherData.setMeasurements(82, 70, 29.2);
   weatherData.setMeasurements(78, 90, 29.2);
-
 }
 
 import onStandardLibrary from './on-standard-library';
@@ -148,6 +159,6 @@ const ChapterTwo = {
   exampleOne,
   exampleTwo,
   onStandardLibrary,
-}
+};
 
 export default ChapterTwo;

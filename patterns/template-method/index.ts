@@ -1,4 +1,3 @@
-
 /**
  * The Template Method Pattern
  *
@@ -45,21 +44,33 @@ abstract class CaffeineBeverage {
     this.pourInCup();
     this.addCondiments();
   }
-  boilWater() { console.log('Boil! That! Water!'); }
-  pourInCup() { console.log('In! The! Cup!'); }
+  boilWater() {
+    console.log('Boil! That! Water!');
+  }
+  pourInCup() {
+    console.log('In! The! Cup!');
+  }
 
   abstract brew: () => void;
   abstract addCondiments: () => void;
 }
 
 class Coffee extends CaffeineBeverage {
-  brew = () => { console.log('In a pot!') }
-  addCondiments = () => { console.log('Add those condiments!') }
+  brew = () => {
+    console.log('In a pot!');
+  };
+  addCondiments = () => {
+    console.log('Add those condiments!');
+  };
 }
 
 class Tea extends CaffeineBeverage {
-  brew = () => { console.log('In a kettle?!') }
-  addCondiments = () => { console.log('Add those condiments! But tea.') }
+  brew = () => {
+    console.log('In a kettle?!');
+  };
+  addCondiments = () => {
+    console.log('Add those condiments! But tea.');
+  };
 }
 
 abstract class CaffeineBeverageWithHook {
@@ -74,17 +85,27 @@ abstract class CaffeineBeverageWithHook {
       this.addCondiments();
     }
   }
-  boilWater() { console.log('Boil! That! Water!'); }
-  pourInCup() { console.log('In! The! Cup!'); }
-  customerWantsCondiments() { return true }
+  boilWater() {
+    console.log('Boil! That! Water!');
+  }
+  pourInCup() {
+    console.log('In! The! Cup!');
+  }
+  customerWantsCondiments() {
+    return true;
+  }
 
   abstract brew: () => void;
   abstract addCondiments: () => void;
 }
 
 class CoffeeWithHook extends CaffeineBeverageWithHook {
-  brew = () => { console.log('In a pot!') }
-  addCondiments = () => { console.log('Add those condiments!') }
+  brew = () => {
+    console.log('In a pot!');
+  };
+  addCondiments = () => {
+    console.log('Add those condiments!');
+  };
 
   /*
    * We are just manually overwriting the call here, for getting the user input
@@ -110,7 +131,6 @@ function exampleOne() {
  * similar here
  */
 
-
 interface IValued {
   value: number;
 }
@@ -135,5 +155,4 @@ class Clown implements IComparable<IValueNom> {
   }
 }
 
-
-export default { exampleOne }
+export default {exampleOne};

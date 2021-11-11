@@ -1,10 +1,12 @@
-import program from 'commander';
+import {program} from 'commander';
 import patterns from './patterns';
 
 const patternNames = Object.keys(patterns);
 
 function listAllPatterns() {
-  patternNames.forEach(pattern => { console.log(pattern) });
+  patternNames.forEach(pattern => {
+    console.log(pattern);
+  });
 }
 
 function runPattern(k: string) {
@@ -17,7 +19,7 @@ function runPattern(k: string) {
   function runAll(obj: any) {
     Object.keys(obj).forEach(key => {
       obj[key]();
-    })
+    });
   }
   const ok = patterns[k];
   runAll(ok);
@@ -39,14 +41,14 @@ if (program.list) {
 
 if (program.pattern) {
   executed = true;
-  runPattern(program.pattern)
+  runPattern(program.pattern);
 }
 
 if (program.all) {
   executed = true;
   patternNames.forEach(pattern => {
     runPattern(pattern);
-  })
+  });
 }
 
 if (!executed) {

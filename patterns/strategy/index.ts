@@ -19,7 +19,7 @@ abstract class Duck {
   }
 
   public swim() {
-    console.log("All ducks float, even decoys!");
+    console.log('All ducks float, even decoys!');
   }
 
   public setFlyBehavior(fb: FlyBehavior) {
@@ -48,19 +48,19 @@ class FlyNoWay implements FlyBehavior {
 
 class Quack implements QuackBehavior {
   public quack() {
-    console.log("Quack");
+    console.log('Quack');
   }
 }
 
 class MuteQuack implements QuackBehavior {
   public quack() {
-    console.log("<< Silence >>");
+    console.log('<< Silence >>');
   }
 }
 
 class Squeak implements QuackBehavior {
   public quack() {
-    console.log("Squeak");
+    console.log('Squeak');
   }
 }
 
@@ -73,7 +73,7 @@ class MallardDuck extends Duck {
 class RubberDuck extends Duck {
   flyBehavior = new FlyNoWay();
   quackBehavior = new MuteQuack();
-  display = () => console.log("I am a Rubber Duck!");
+  display = () => console.log('I am a Rubber Duck!');
 }
 
 class ModelDuck extends Duck {
@@ -89,36 +89,36 @@ class FlyRocketPowered implements FlyBehavior {
 }
 
 const exampleOne = () => {
-  console.log("Strategy Pattern: Example 1\n");
-  console.log("Incoming Mallard Duck!");
+  console.log('Strategy Pattern: Example 1\n');
+  console.log('Incoming Mallard Duck!');
   const mallard = new MallardDuck();
   mallard.performQuack();
   mallard.performFly();
-  console.log("Now the rubber duck!");
+  console.log('Now the rubber duck!');
   const rubberDuck = new RubberDuck();
   rubberDuck.performQuack();
   rubberDuck.performFly();
-  console.log("\n**DONE**");
-}
+  console.log('\n**DONE**');
+};
 
 const exampleTwo = () => {
-  console.log("Strategy Pattern: Example 2\n");
-  console.log("Our implementation allows for dynamic assignment of behaviors.");
+  console.log('Strategy Pattern: Example 2\n');
+  console.log('Our implementation allows for dynamic assignment of behaviors.');
   const model = new ModelDuck();
-  console.log("Executing and changing Fly...");
+  console.log('Executing and changing Fly...');
   model.performFly();
   model.setFlyBehavior(new FlyRocketPowered());
   model.performFly();
-  console.log("Executing and changing Quack...");
+  console.log('Executing and changing Quack...');
   model.performQuack();
   model.setQuackBehavior(new Squeak());
   model.performQuack();
-  console.log("\n**DONE**");
-}
+  console.log('\n**DONE**');
+};
 
 const ChapterOne = {
   exampleOne,
   exampleTwo,
-}
+};
 
 export default ChapterOne;

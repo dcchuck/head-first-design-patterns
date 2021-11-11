@@ -31,7 +31,7 @@ abstract class Pizza {
     console.log('Tossing dough!');
     console.log('Adding sauce...');
     console.log('Adding toppings: ');
-    for (let topping of this.toppings) {
+    for (const topping of this.toppings) {
       console.log(`  ${topping}`);
     }
   }
@@ -64,7 +64,7 @@ abstract class PizzaStore {
     return pizza;
   }
 
-  protected abstract createPizza(t: string): Pizza
+  protected abstract createPizza(t: string): Pizza;
 }
 
 class NyStyleCheesePizza extends Pizza {
@@ -163,8 +163,8 @@ const exampleOne = () => {
   console.log(`Ethan orderd a ${pizza.getName()}`);
   pizza = chicagoStore.orderPizza('pepperoni');
   console.log(`Joel orderd a ${pizza.getName()}`);
-}
+};
 
 export default {
   exampleOne,
-}
+};

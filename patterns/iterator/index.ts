@@ -18,17 +18,30 @@ class MenuItem {
   description: string;
   vegetarian: boolean;
   price: number;
-  constructor(name: string, description: string, vegetarian: boolean, price: number) {
+  constructor(
+    name: string,
+    description: string,
+    vegetarian: boolean,
+    price: number
+  ) {
     this.name = name;
     this.description = description;
     this.vegetarian = vegetarian;
     this.price = price;
   }
 
-  getName() { return this.name };
-  getDescription() { return this.description; }
-  getPrice() { return this.price; }
-  isVegetarian() { return this.isVegetarian; }
+  getName() {
+    return this.name;
+  }
+  getDescription() {
+    return this.description;
+  }
+  getPrice() {
+    return this.price;
+  }
+  isVegetarian() {
+    return this.isVegetarian;
+  }
 }
 
 class DinnerMenuIterator implements IIterator<MenuItem> {
@@ -47,7 +60,9 @@ class DinnerMenuIterator implements IIterator<MenuItem> {
 
   // No need for the if/else here
   hasNext() {
-    return !((this.position >= this.items.length) || (this.items[this.position] == null))
+    return !(
+      this.position >= this.items.length || this.items[this.position] === null
+    );
   }
 }
 
@@ -58,13 +73,23 @@ class DinnerMenu {
   constructor() {
     this.menuItems = [];
 
-    this.addItem("Tasty Burger", "It is a tasty burger!", false, 23.99);
-    this.addItem("Veggie Burger", "It is a veggie burger!", true, 33.99);
-    this.addItem("General Tso's Chicken", "From the good", false, 45.00);
-    this.addItem("Beef Pot Pie", "A flavor sensation that will send you to the moon!", false, 3.99);
+    this.addItem('Tasty Burger', 'It is a tasty burger!', false, 23.99);
+    this.addItem('Veggie Burger', 'It is a veggie burger!', true, 33.99);
+    this.addItem("General Tso's Chicken", 'From the good', false, 45.0);
+    this.addItem(
+      'Beef Pot Pie',
+      'A flavor sensation that will send you to the moon!',
+      false,
+      3.99
+    );
   }
 
-  addItem(name: string, description: string, vegetarian: boolean, price: number) {
+  addItem(
+    name: string,
+    description: string,
+    vegetarian: boolean,
+    price: number
+  ) {
     const menuItem = new MenuItem(name, description, vegetarian, price);
     this.menuItems.push(menuItem);
   }
@@ -90,7 +115,9 @@ class Waitress {
   private printMenuIter(iter: DinnerMenuIterator) {
     while (iter.hasNext()) {
       const menuItem = iter.next();
-      console.log(`${menuItem.getName()}, ${menuItem.getPrice()} -- ${menuItem.getDescription()}`);
+      console.log(
+        `${menuItem.getName()}, ${menuItem.getPrice()} -- ${menuItem.getDescription()}`
+      );
     }
   }
 }
@@ -101,4 +128,4 @@ function exampleOne() {
   waitress.printMenu();
 }
 
-export default { exampleOne }
+export default {exampleOne};

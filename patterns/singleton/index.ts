@@ -31,7 +31,7 @@ class ChocolateBoiler {
 const exampleOne = () => {
   const boiler = ChocolateBoiler.getInstace();
   boiler.report();
-}
+};
 
 /**
  * Javascript is single threaded, so there's no need to worry about enabling
@@ -39,4 +39,4 @@ const exampleOne = () => {
  * nice in the generic sense.
  */
 
-export default { exampleOne };
+export default {exampleOne};

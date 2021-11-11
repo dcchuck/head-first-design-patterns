@@ -13,9 +13,8 @@ interface Command {
 
 class Light {
   name: string;
-  constructor(name: string){
+  constructor(name: string) {
     this.name = name;
-
   }
   on() {
     console.log(`Turning on ${this.name}`);
@@ -95,7 +94,7 @@ class NoCommand implements Command {
 
 class Stereo {
   on() {
-    console.log('Stereo on!')
+    console.log('Stereo on!');
   }
 
   off() {}
@@ -186,4 +185,4 @@ function exampleTwo() {
 export default {
   exampleOne,
   exampleTwo,
-}
+};
