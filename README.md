@@ -26,4 +26,4 @@ The text is a very approachable introduction to design patterns. If you have any
 
 The code from the book, as well as a number of free and/or alternate media design pattern resources are availble over at WickedlySmart's wesbite - [link](https://www.wickedlysmart.com/head-first-design-patterns/)
 
-[Design Patterns](./DESIGN_PRINCIPLES.md)
+[Design Principles](./DESIGN_PRINCIPLES.md)
